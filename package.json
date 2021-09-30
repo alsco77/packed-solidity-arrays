@@ -1,6 +1,6 @@
 {
-    "name": "packed-uint16-array",
-    "version": "1.0.0",
+    "name": "packed-solidity-arrays",
+    "version": "1.0.1",
     "description": "Packed array for your uints contracts",
     "license": "MIT",
     "scripts": {
