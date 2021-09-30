@@ -1,0 +1,37 @@
+import { Signer } from "ethers"
+import { Account } from "types"
+
+/**
+ * @dev Standard accounts
+ */
+export class StandardAccounts {
+    /**
+     * @dev Default accounts as per system Migrations
+     */
+    public all: Account[]
+
+    public default: Account
+
+    public governor: Account
+
+    public other: Account
+
+    public dummy1: Account
+
+    public dummy2: Account
+
+    public dummy3: Account
+
+    public async initAccounts(signers: Signer[]): Promise<StandardAccounts> {
+        this.all = await Promise.all(
+            signers.map(async (s) => ({
+                signer: s,
+                address: await s.getAddress(),
+            })),
+        )
+        ;[this.default, this.governor, this.other, this.dummy1, this.dummy2, this.dummy3] = this.all
+        return this
+    }
+}
+
+export default StandardAccounts
