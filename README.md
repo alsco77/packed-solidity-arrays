@@ -1,6 +1,8 @@
 <br/>
 
-## <br />
+[![npm version](https://badge.fury.io/js/packed-solidity-arrays.svg)](https://badge.fury.io/js/packed-solidity-arrays)
+
+<br/>
 
 ## packed-uint16-array
 
